@@ -1,8 +1,10 @@
+/* This centers the page */
 body {
     max-width: 800px;
     margin: auto;
 }
 
+/* This makes the seed and flags inputs a reasonable width */
 .typingwidth {
     width: 50%;
 }

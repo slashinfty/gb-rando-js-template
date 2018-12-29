@@ -3,12 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--TODO Replace with game name-->
+        <title>Video Game Randomizer</title>
         <link href="css/index.css" rel="stylesheet">
-        <!--Will need to add a favicon-->
+        <!--TODO Will need to add a favicon-->
         <link rel="icon" type="image/x-icon" href="images/favicon.png">
     </head>
     <body>
-        <!--Replace with game name and author(s) name(s)-->
+        <!--TODO Replace with game name and author(s) name(s)-->
         <h1>Video Game Randomizer</h1>
         <h3>by Author(s)</h3>
         <!--Accepts only .gb files; adjust as necessary-->
@@ -17,8 +19,17 @@
         <p><label for="seedNumber">Seed: </label><input type="text" id="seedNumber" class="typingwidth" placeholder="Leave blank for random seed" /></p>
         <!--Input box for flags-->
         <p><label for="flagSet">Flags: </label><input type="text" id="flagSet" class="typingwidth" placeholder="Leave blank if selecting options" /></p>
-        <!--Options here-->
-        
+        <!--TODO Options here; examples given-->
+        <p>
+        <label for="shuffleLevels">Shuffle Levels?</label><input type="checkbox" id="shuffleLevels" /><br>
+        <label for="randomEnemies">Randomize Enemies?</label><input type="checkbox" id="randomEnemies" /><br>
+        <label for="shuffleBosses">Shuffle Bosses: </label>
+        <select id="shuffleBosses">
+            <option value="noShuffle">Do Not Shuffle Bosses</option>
+            <option value="miniSeparate">Shuffle Mini-Bosses Separately</option>
+            <option value="allTogether">Shuffle All Bosses Together</option>
+        </select>
+        </p>
         <!--Button to randomize ROM-->
         <p><button id="randomizeRom" disabled>Generate Randomized ROM</button></p>
         

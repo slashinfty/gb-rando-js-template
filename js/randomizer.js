@@ -1,3 +1,6 @@
+//A list of all options, which will be true or undefined
+var doLevels, doEnemies, doMiniBosses, doAllBosses;
+
 //Adapted from https://github.com/bit101/lcg
 //JavaScript's random does not allow seeding, so we make our own random number generator
 var rng = {
@@ -8,7 +11,7 @@ var rng = {
     seed: 0,
     setSeed: function(seed) {
         this.printSeed = seed;
-        this.seed = parseInt(this.printSeed, 16);
+        this.seed = parseInt(this.printSeed); //Change this depending on how seeds are made, like hexadecimal
     },
     nextPrng: function() {
         this.seed = (this.seed * this.a +this.c) % this.m;
@@ -47,3 +50,5 @@ function checksum(rom) {
     comp += 25;
     rom[0x14D] = 0 - (comp & 0xFF);
 }
+
+//Functions that randomize the game should be included here
