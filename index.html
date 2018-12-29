@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/index.css" rel="stylesheet">
+        <!--Will need to add a favicon-->
+        <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    </head>
+    <body>
+        <!--Replace with game name and author(s) name(s)-->
+        <h1>Video Game Randomizer</h1>
+        <h3>by Author(s)</h3>
+        <!--Accepts only .gb files; adjust as necessary-->
+        <p><input type="file" id="fileUpload" accept=".gb" /></p>
+        <!--Input box for seed number-->
+        <p><label for="seedNumber">Seed: </label><input type="text" id="seedNumber" class="typingwidth" placeholder="Leave blank for random seed" /></p>
+        <!--Input box for flags-->
+        <p><label for="flagSet">Flags: </label><input type="text" id="flagSet" class="typingwidth" placeholder="Leave blank if selecting options" /></p>
+        <!--Options here-->
+        
+        <!--Button to randomize ROM-->
+        <p><button id="randomizeRom" disabled>Generate Randomized ROM</button></p>
+        
+        <script src="https://fastcdn.org/FileSaver.js/1.1.20151003/FileSaver.min.js"></script>
+        <script src="js/logistics.js"></script>
+        <script src="js/randomizer.js"></script>
+    </body>
+</html>
